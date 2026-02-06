@@ -1,0 +1,1669 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-size:10.0pt;
+	font-family:"Calibri",sans-serif;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal>&lt;!DOCTYPE html&gt;</p>
+
+<p class=MsoNormal>&lt;html lang=&quot;am&quot; dir=&quot;ltr&quot;&gt;</p>
+
+<p class=MsoNormal>&lt;head&gt;</p>
+
+<p class=MsoNormal>    &lt;meta charset=&quot;UTF-8&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;meta name=&quot;viewport&quot;
+content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;title&gt;የተማሪ ውጤት መመልከቻ&lt;/title&gt;</p>
+
+<p class=MsoNormal>    &lt;link
+href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css&quot;
+rel=&quot;stylesheet&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;link rel=&quot;stylesheet&quot;
+href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;style&gt;</p>
+
+<p class=MsoNormal>        :root {</p>
+
+<p class=MsoNormal>            --primary-color: #2c3e50;</p>
+
+<p class=MsoNormal>            --secondary-color: #3498db;</p>
+
+<p class=MsoNormal>            --success-color: #27ae60;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        body {</p>
+
+<p class=MsoNormal>            font-family: 'Arial', 'Ethiopic Yebse',
+sans-serif;</p>
+
+<p class=MsoNormal>            background: linear-gradient(135deg, #f5f7fa 0%,
+#c3cfe2 100%);</p>
+
+<p class=MsoNormal>            min-height: 100vh;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        .amharic-text {</p>
+
+<p class=MsoNormal>            font-family: 'Ethiopic Yebse', 'Abyssinica SIL',
+sans-serif;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        .login-container {</p>
+
+<p class=MsoNormal>            max-width: 500px;</p>
+
+<p class=MsoNormal>            margin: 100px auto;</p>
+
+<p class=MsoNormal>            background: white;</p>
+
+<p class=MsoNormal>            border-radius: 20px;</p>
+
+<p class=MsoNormal>            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);</p>
+
+<p class=MsoNormal>            overflow: hidden;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        .login-header {</p>
+
+<p class=MsoNormal>            background: linear-gradient(135deg,
+var(--primary-color), var(--secondary-color));</p>
+
+<p class=MsoNormal>            color: white;</p>
+
+<p class=MsoNormal>            padding: 2rem;</p>
+
+<p class=MsoNormal>            text-align: center;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        .login-body {</p>
+
+<p class=MsoNormal>            padding: 2rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        .form-control {</p>
+
+<p class=MsoNormal>            border-radius: 10px;</p>
+
+<p class=MsoNormal>            padding: 12px 15px;</p>
+
+<p class=MsoNormal>            border: 2px solid #e0e0e0;</p>
+
+<p class=MsoNormal>            transition: all 0.3s;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        .form-control:focus {</p>
+
+<p class=MsoNormal>            border-color: var(--secondary-color);</p>
+
+<p class=MsoNormal>            box-shadow: 0 0 0 0.2rem rgba(52, 152, 219,
+0.25);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        .btn-primary {</p>
+
+<p class=MsoNormal>            background: linear-gradient(135deg,
+var(--secondary-color), var(--primary-color));</p>
+
+<p class=MsoNormal>            border: none;</p>
+
+<p class=MsoNormal>            border-radius: 10px;</p>
+
+<p class=MsoNormal>            padding: 12px;</p>
+
+<p class=MsoNormal>            font-weight: 600;</p>
+
+<p class=MsoNormal>            transition: all 0.3s;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        .btn-primary:hover {</p>
+
+<p class=MsoNormal>            transform: translateY(-2px);</p>
+
+<p class=MsoNormal>            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        .student-card {</p>
+
+<p class=MsoNormal>            background: white;</p>
+
+<p class=MsoNormal>            border-radius: 15px;</p>
+
+<p class=MsoNormal>            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);</p>
+
+<p class=MsoNormal>            margin-bottom: 20px;</p>
+
+<p class=MsoNormal>            overflow: hidden;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        .student-header {</p>
+
+<p class=MsoNormal>            background: linear-gradient(135deg, #667eea 0%,
+#764ba2 100%);</p>
+
+<p class=MsoNormal>            color: white;</p>
+
+<p class=MsoNormal>            padding: 1.5rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        .score-badge {</p>
+
+<p class=MsoNormal>            font-size: 2.5rem;</p>
+
+<p class=MsoNormal>            font-weight: bold;</p>
+
+<p class=MsoNormal>            padding: 10px 25px;</p>
+
+<p class=MsoNormal>            border-radius: 50px;</p>
+
+<p class=MsoNormal>            margin: 10px 0;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        .score-excellent { background: #2ecc71; color:
+white; }</p>
+
+<p class=MsoNormal>        .score-good { background: #3498db; color: white; }</p>
+
+<p class=MsoNormal>        .score-average { background: #f39c12; color: white;
+}</p>
+
+<p class=MsoNormal>        .score-low { background: #e67e22; color: white; }</p>
+
+<p class=MsoNormal>        .score-poor { background: #e74c3c; color: white; }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        .exam-breakdown {</p>
+
+<p class=MsoNormal>            background: #f8f9fa;</p>
+
+<p class=MsoNormal>            border-radius: 10px;</p>
+
+<p class=MsoNormal>            padding: 1rem;</p>
+
+<p class=MsoNormal>            margin: 1rem 0;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        .progress {</p>
+
+<p class=MsoNormal>            height: 25px;</p>
+
+<p class=MsoNormal>            border-radius: 12px;</p>
+
+<p class=MsoNormal>            margin: 10px 0;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        .progress-bar {</p>
+
+<p class=MsoNormal>            border-radius: 12px;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        .back-btn {</p>
+
+<p class=MsoNormal>            position: fixed;</p>
+
+<p class=MsoNormal>            bottom: 20px;</p>
+
+<p class=MsoNormal>            right: 20px;</p>
+
+<p class=MsoNormal>            z-index: 1000;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        .qr-code-container {</p>
+
+<p class=MsoNormal>            text-align: center;</p>
+
+<p class=MsoNormal>            padding: 20px;</p>
+
+<p class=MsoNormal>            background: white;</p>
+
+<p class=MsoNormal>            border-radius: 10px;</p>
+
+<p class=MsoNormal>            margin-top: 20px;</p>
+
+<p class=MsoNormal>            box-shadow: 0 3px 10px rgba(0,0,0,0.1);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        .share-buttons {</p>
+
+<p class=MsoNormal>            display: flex;</p>
+
+<p class=MsoNormal>            gap: 10px;</p>
+
+<p class=MsoNormal>            margin-top: 15px;</p>
+
+<p class=MsoNormal>            justify-content: center;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        .share-btn {</p>
+
+<p class=MsoNormal>            flex: 1;</p>
+
+<p class=MsoNormal>            max-width: 120px;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        .notification {</p>
+
+<p class=MsoNormal>            position: fixed;</p>
+
+<p class=MsoNormal>            top: 20px;</p>
+
+<p class=MsoNormal>            right: 20px;</p>
+
+<p class=MsoNormal>            z-index: 1000;</p>
+
+<p class=MsoNormal>            display: none;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>    &lt;/style&gt;</p>
+
+<p class=MsoNormal>&lt;/head&gt;</p>
+
+<p class=MsoNormal>&lt;body&gt;</p>
+
+<p class=MsoNormal>    &lt;!-- Student Login Portal --&gt;</p>
+
+<p class=MsoNormal>    &lt;div id=&quot;loginPortal&quot;
+class=&quot;login-container&quot;&gt;</p>
+
+<p class=MsoNormal>        &lt;div class=&quot;login-header&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;h3 class=&quot;amharic-text&quot;&gt;ረቢ መካነ ጎልጎታ
+መድኃኔዓለም ቤተክርስቲያን&lt;/h3&gt;</p>
+
+<p class=MsoNormal>            &lt;h5 class=&quot;amharic-text&quot;&gt;የተማሪ ውጤት
+መመልከቻ ስርዓት&lt;/h5&gt;</p>
+
+<p class=MsoNormal>        &lt;/div&gt;</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        &lt;div class=&quot;login-body&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;text-center mb-4&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;h4 class=&quot;amharic-text&quot;&gt;ውጤትህን
+ለማየት ይግቡ&lt;/h4&gt;</p>
+
+<p class=MsoNormal>                &lt;p class=&quot;text-muted
+amharic-text&quot;&gt;የስልክ ቁጥርህን ወይም የተማሪ መለያ ቁጥርህን አስገባ&lt;/p&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            &lt;!-- Method Selection --&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;mb-4&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;btn-group w-100&quot;
+role=&quot;group&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;input type=&quot;radio&quot;
+class=&quot;btn-check&quot; name=&quot;accessMethod&quot;
+id=&quot;phoneMethod&quot; checked&gt;</p>
+
+<p class=MsoNormal>                    &lt;label class=&quot;btn
+btn-outline-primary&quot; for=&quot;phoneMethod&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;i class=&quot;fas fa-phone&quot;&gt;&lt;/i&gt;
+በስልክ ቁጥር</p>
+
+<p class=MsoNormal>                    &lt;/label&gt;</p>
+
+<p class=MsoNormal>                    </p>
+
+<p class=MsoNormal>                    &lt;input type=&quot;radio&quot;
+class=&quot;btn-check&quot; name=&quot;accessMethod&quot;
+id=&quot;idMethod&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;label class=&quot;btn
+btn-outline-primary&quot; for=&quot;idMethod&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;i class=&quot;fas
+fa-id-card&quot;&gt;&lt;/i&gt; በተማሪ መለያ</p>
+
+<p class=MsoNormal>                    &lt;/label&gt;</p>
+
+<p class=MsoNormal>                    </p>
+
+<p class=MsoNormal>                    &lt;input type=&quot;radio&quot;
+class=&quot;btn-check&quot; name=&quot;accessMethod&quot;
+id=&quot;nameMethod&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;label class=&quot;btn
+btn-outline-primary&quot; for=&quot;nameMethod&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;i class=&quot;fas
+fa-user&quot;&gt;&lt;/i&gt; በስም</p>
+
+<p class=MsoNormal>                    &lt;/label&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            &lt;!-- Access Forms --&gt;</p>
+
+<p class=MsoNormal>            &lt;div id=&quot;phoneForm&quot;
+class=&quot;access-form&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;mb-3&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;label class=&quot;form-label
+amharic-text&quot;&gt;የስልክ ቁጥር&lt;/label&gt;</p>
+
+<p class=MsoNormal>                    &lt;div
+class=&quot;input-group&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;span
+class=&quot;input-group-text&quot;&gt;+251&lt;/span&gt;</p>
+
+<p class=MsoNormal>                        &lt;input type=&quot;tel&quot;
+id=&quot;phoneNumber&quot; class=&quot;form-control&quot; placeholder=&quot;9XX
+XXX XXX&quot; pattern=&quot;[0-9]{9}&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;form-text
+amharic-text&quot;&gt;ምሳሌ: 911223344&lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>                </p>
+
+<p class=MsoNormal>                &lt;div class=&quot;mb-3&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;label class=&quot;form-label
+amharic-text&quot;&gt;የደህንነት ኮድ (Security Code)&lt;/label&gt;</p>
+
+<p class=MsoNormal>                    &lt;input type=&quot;text&quot;
+id=&quot;securityCode&quot; class=&quot;form-control&quot; placeholder=&quot;የተሰጠዎትን
+6 አሃዝ ኮድ ያስገቡ&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            &lt;div id=&quot;idForm&quot;
+class=&quot;access-form&quot; style=&quot;display: none;&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;mb-3&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;label class=&quot;form-label
+amharic-text&quot;&gt;የተማሪ መለያ ቁጥር&lt;/label&gt;</p>
+
+<p class=MsoNormal>                    &lt;input type=&quot;text&quot;
+id=&quot;studentId&quot; class=&quot;form-control&quot; placeholder=&quot;ምሳሌ:
+16 (ለበእምነት ካሳ)&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>                </p>
+
+<p class=MsoNormal>                &lt;div class=&quot;mb-3&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;label class=&quot;form-label
+amharic-text&quot;&gt;የስም የመጀመሪያ ሁለት ፊደላት&lt;/label&gt;</p>
+
+<p class=MsoNormal>                    &lt;input type=&quot;text&quot;
+id=&quot;nameInitials&quot; class=&quot;form-control&quot; placeholder=&quot;ምሳሌ:
+በእ&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            &lt;div id=&quot;nameForm&quot;
+class=&quot;access-form&quot; style=&quot;display: none;&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;mb-3&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;label class=&quot;form-label
+amharic-text&quot;&gt;ሙሉ ስም&lt;/label&gt;</p>
+
+<p class=MsoNormal>                    &lt;input type=&quot;text&quot;
+id=&quot;fullName&quot; class=&quot;form-control&quot; placeholder=&quot;ምሳሌ: በእምነት
+ካሳ&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>                </p>
+
+<p class=MsoNormal>                &lt;div class=&quot;mb-3&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;label class=&quot;form-label amharic-text&quot;&gt;የክርስትና
+ስም&lt;/label&gt;</p>
+
+<p class=MsoNormal>                    &lt;input type=&quot;text&quot;
+id=&quot;christianName&quot; class=&quot;form-control&quot; placeholder=&quot;ምሳሌ:
+ተስፋ ሚካኤል&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            &lt;button id=&quot;viewResultBtn&quot;
+class=&quot;btn btn-primary w-100 mb-3&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;i class=&quot;fas
+fa-eye&quot;&gt;&lt;/i&gt; ውጤት ለመመልከት</p>
+
+<p class=MsoNormal>            &lt;/button&gt;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            &lt;div class=&quot;text-center&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;a href=&quot;#&quot;
+id=&quot;forgotAccess&quot; class=&quot;text-decoration-none
+amharic-text&quot;&gt;የመግባት መረጃ ረሳኸው?&lt;/a&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            &lt;div class=&quot;mt-4 text-center&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;p class=&quot;text-muted amharic-text
+small&quot;&gt;</p>
+
+<p class=MsoNormal>                    የ2018 ዓ.ም የሰባተኛ ክፍል ተማሪዎች የመሠረተ ሃይማኖት ፈተና
+ውጤት</p>
+
+<p class=MsoNormal>                &lt;/p&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;/div&gt;</p>
+
+<p class=MsoNormal>    &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;!-- Student Result Display (Hidden initially) --&gt;</p>
+
+<p class=MsoNormal>    &lt;div id=&quot;resultDisplay&quot;
+class=&quot;container&quot; style=&quot;display: none; padding-top: 20px;&quot;&gt;</p>
+
+<p class=MsoNormal>        &lt;div class=&quot;student-card&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;student-header
+text-center&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;h4 id=&quot;studentFullName&quot;
+class=&quot;amharic-text&quot;&gt;&lt;/h4&gt;</p>
+
+<p class=MsoNormal>                &lt;h6 id=&quot;studentChristianName&quot;
+class=&quot;mb-3&quot;&gt;&lt;/h6&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;row&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;col-6&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;div class=&quot;amharic-text
+small&quot;&gt;ተማሪ መለያ&lt;/div&gt;</p>
+
+<p class=MsoNormal>                        &lt;div
+id=&quot;studentIdDisplay&quot; class=&quot;h5&quot;&gt;-&lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;col-6&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;div class=&quot;amharic-text
+small&quot;&gt;ክፍል&lt;/div&gt;</p>
+
+<p class=MsoNormal>                        &lt;div class=&quot;h5&quot;&gt;7ኛ ክፍል&lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            &lt;div class=&quot;p-4&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;!-- Overall Score --&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;text-center
+mb-4&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;amharic-text
+mb-2&quot;&gt;አጠቃላይ ውጤት&lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div id=&quot;totalScoreBadge&quot;
+class=&quot;score-badge d-inline-block&quot;&gt;-&lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div id=&quot;gradeDisplay&quot;
+class=&quot;h4 mt-2&quot;&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>                </p>
+
+<p class=MsoNormal>                &lt;!-- Exam Breakdown --&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;exam-breakdown&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;h6 class=&quot;amharic-text
+mb-3&quot;&gt;የፈተና ዝርዝር ውጤት&lt;/h6&gt;</p>
+
+<p class=MsoNormal>                    </p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;mb-3&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;div class=&quot;d-flex
+justify-content-between amharic-text&quot;&gt;</p>
+
+<p class=MsoNormal>                            &lt;span&gt;የክፍል ፈተና
+(10%)&lt;/span&gt;</p>
+
+<p class=MsoNormal>                            &lt;span id=&quot;classExam1&quot;&gt;-&lt;/span&gt;</p>
+
+<p class=MsoNormal>                        &lt;/div&gt;</p>
+
+<p class=MsoNormal>                        &lt;div
+class=&quot;progress&quot;&gt;</p>
+
+<p class=MsoNormal>                            &lt;div
+id=&quot;classExam1Bar&quot; class=&quot;progress-bar&quot; style=&quot;width:
+0%&quot;&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>                        &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    </p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;mb-3&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;div class=&quot;d-flex
+justify-content-between amharic-text&quot;&gt;</p>
+
+<p class=MsoNormal>                            &lt;span&gt;የቡድን ስራ
+(15%)&lt;/span&gt;</p>
+
+<p class=MsoNormal>                            &lt;span
+id=&quot;groupWork&quot;&gt;-&lt;/span&gt;</p>
+
+<p class=MsoNormal>                        &lt;/div&gt;</p>
+
+<p class=MsoNormal>                        &lt;div
+class=&quot;progress&quot;&gt;</p>
+
+<p class=MsoNormal>                            &lt;div
+id=&quot;groupWorkBar&quot; class=&quot;progress-bar bg-success&quot;
+style=&quot;width: 0%&quot;&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>                        &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    </p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;mb-3&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;div class=&quot;d-flex
+justify-content-between amharic-text&quot;&gt;</p>
+
+<p class=MsoNormal>                            &lt;span&gt;አጋማሽ ፈተና
+(25%)&lt;/span&gt;</p>
+
+<p class=MsoNormal>                            &lt;span
+id=&quot;midExam&quot;&gt;-&lt;/span&gt;</p>
+
+<p class=MsoNormal>                        &lt;/div&gt;</p>
+
+<p class=MsoNormal>                        &lt;div
+class=&quot;progress&quot;&gt;</p>
+
+<p class=MsoNormal>                            &lt;div
+id=&quot;midExamBar&quot; class=&quot;progress-bar bg-warning&quot;
+style=&quot;width: 0%&quot;&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>                        &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    </p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;mb-3&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;div class=&quot;d-flex
+justify-content-between amharic-text&quot;&gt;</p>
+
+<p class=MsoNormal>                            &lt;span&gt;የክፍል ፈተና
+(10%)&lt;/span&gt;</p>
+
+<p class=MsoNormal>                            &lt;span
+id=&quot;classExam2&quot;&gt;-&lt;/span&gt;</p>
+
+<p class=MsoNormal>                        &lt;/div&gt;</p>
+
+<p class=MsoNormal>                        &lt;div
+class=&quot;progress&quot;&gt;</p>
+
+<p class=MsoNormal>                            &lt;div
+id=&quot;classExam2Bar&quot; class=&quot;progress-bar bg-info&quot;
+style=&quot;width: 0%&quot;&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>                        &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    </p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;mt-4 pt-3 border-top&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;div class=&quot;d-flex
+justify-content-between amharic-text h5&quot;&gt;</p>
+
+<p class=MsoNormal>                            &lt;span&gt;ጠቅላላ ድምር
+(60%)&lt;/span&gt;</p>
+
+<p class=MsoNormal>                            &lt;span
+id=&quot;totalScore&quot;&gt;-&lt;/span&gt;</p>
+
+<p class=MsoNormal>                        &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>                </p>
+
+<p class=MsoNormal>                &lt;!-- Performance Analysis --&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;mt-4&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;h6 class=&quot;amharic-text
+mb-3&quot;&gt;የአፈፃፀም ትንተና&lt;/h6&gt;</p>
+
+<p class=MsoNormal>                    &lt;div id=&quot;performanceComment&quot;
+class=&quot;amharic-text p-3 bg-light rounded&quot;&gt;</p>
+
+<p class=MsoNormal>                        ውጤትዎ በማስገኘት ላይ...</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>                </p>
+
+<p class=MsoNormal>                &lt;!-- Share Options --&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;mt-4
+qr-code-container&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;h6 class=&quot;amharic-text
+mb-3&quot;&gt;ውጤትህን አጋራ&lt;/h6&gt;</p>
+
+<p class=MsoNormal>                    &lt;div id=&quot;qrCode&quot;
+style=&quot;width: 150px; height: 150px; margin: 0 auto; background:
+#f0f0f0;&quot;&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;p class=&quot;text-muted small mt-2
+amharic-text&quot;&gt;ለወላጆች ወይም ለመምህራን ለማሳየት የQR ኮድ&lt;/p&gt;</p>
+
+<p class=MsoNormal>                    </p>
+
+<p class=MsoNormal>                    &lt;div
+class=&quot;share-buttons&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;button
+onclick=&quot;shareResult('whatsapp')&quot; class=&quot;btn btn-success
+share-btn&quot;&gt;</p>
+
+<p class=MsoNormal>                            &lt;i class=&quot;fab
+fa-whatsapp&quot;&gt;&lt;/i&gt; WhatsApp</p>
+
+<p class=MsoNormal>                        &lt;/button&gt;</p>
+
+<p class=MsoNormal>                        &lt;button
+onclick=&quot;shareResult('telegram')&quot; class=&quot;btn btn-primary
+share-btn&quot;&gt;</p>
+
+<p class=MsoNormal>                            &lt;i class=&quot;fab
+fa-telegram&quot;&gt;&lt;/i&gt; Telegram</p>
+
+<p class=MsoNormal>                        &lt;/button&gt;</p>
+
+<p class=MsoNormal>                        &lt;button
+onclick=&quot;printResult()&quot; class=&quot;btn btn-secondary
+share-btn&quot;&gt;</p>
+
+<p class=MsoNormal>                            &lt;i class=&quot;fas
+fa-print&quot;&gt;&lt;/i&gt; Print</p>
+
+<p class=MsoNormal>                        &lt;/button&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>                </p>
+
+<p class=MsoNormal>                &lt;!-- Additional Info --&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;mt-4 pt-3
+border-top&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;row&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;div
+class=&quot;col-md-6&quot;&gt;</p>
+
+<p class=MsoNormal>                            &lt;div class=&quot;amharic-text
+small&quot;&gt;በመምህሩ:&lt;/div&gt;</p>
+
+<p class=MsoNormal>                            &lt;div
+class=&quot;amharic-text&quot;&gt;_________________&lt;/div&gt;</p>
+
+<p class=MsoNormal>                        &lt;/div&gt;</p>
+
+<p class=MsoNormal>                        &lt;div
+class=&quot;col-md-6&quot;&gt;</p>
+
+<p class=MsoNormal>                            &lt;div class=&quot;amharic-text
+small&quot;&gt;ቀን:&lt;/div&gt;</p>
+
+<p class=MsoNormal>                            &lt;div
+class=&quot;amharic-text&quot;&gt;_________________&lt;/div&gt;</p>
+
+<p class=MsoNormal>                        &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;/div&gt;</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        &lt;div class=&quot;text-center mt-4 mb-5&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;button onclick=&quot;goBackToLogin()&quot;
+class=&quot;btn btn-outline-primary&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;i class=&quot;fas
+fa-arrow-left&quot;&gt;&lt;/i&gt; ወደ መግቢያ ተመለስ</p>
+
+<p class=MsoNormal>            &lt;/button&gt;</p>
+
+<p class=MsoNormal>            &lt;button onclick=&quot;viewAllResults()&quot;
+class=&quot;btn btn-primary&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;i class=&quot;fas
+fa-list&quot;&gt;&lt;/i&gt; የሁሉም ተማሪዎች ውጤት ለመመልከት</p>
+
+<p class=MsoNormal>            &lt;/button&gt;</p>
+
+<p class=MsoNormal>        &lt;/div&gt;</p>
+
+<p class=MsoNormal>    &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;!-- Notification --&gt;</p>
+
+<p class=MsoNormal>    &lt;div id=&quot;notification&quot;
+class=&quot;notification alert alert-success&quot; role=&quot;alert&quot;&gt;</p>
+
+<p class=MsoNormal>        &lt;i class=&quot;fas
+fa-check-circle&quot;&gt;&lt;/i&gt; ውጤትዎ በሚገባ ተገኝቷል!</p>
+
+<p class=MsoNormal>    &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;script&gt;</p>
+
+<p class=MsoNormal>        // Student database with access methods</p>
+
+<p class=MsoNormal>        const studentDatabase = {</p>
+
+<p class=MsoNormal>            // Student ID as key</p>
+
+<p class=MsoNormal>            &quot;16&quot;: {</p>
+
+<p class=MsoNormal>                name: &quot;በእምነት ካሳ&quot;,</p>
+
+<p class=MsoNormal>                christianName: &quot;ተስፋ ሚካኤል&quot;,</p>
+
+<p class=MsoNormal>                phone: &quot;911223344&quot;,</p>
+
+<p class=MsoNormal>                securityCode: &quot;123456&quot;,</p>
+
+<p class=MsoNormal>                scores: {</p>
+
+<p class=MsoNormal>                    classExam1: 10,</p>
+
+<p class=MsoNormal>                    groupWork: 15,</p>
+
+<p class=MsoNormal>                    midExam: 20,</p>
+
+<p class=MsoNormal>                    classExam2: 10,</p>
+
+<p class=MsoNormal>                    total: 55</p>
+
+<p class=MsoNormal>                }</p>
+
+<p class=MsoNormal>            },</p>
+
+<p class=MsoNormal>            &quot;13&quot;: {</p>
+
+<p class=MsoNormal>                name: &quot;ሶልያና መንገሻ&quot;,</p>
+
+<p class=MsoNormal>                christianName: &quot;ወለተ ገብርኤል&quot;,</p>
+
+<p class=MsoNormal>                phone: &quot;922334455&quot;,</p>
+
+<p class=MsoNormal>                securityCode: &quot;234567&quot;,</p>
+
+<p class=MsoNormal>                scores: {</p>
+
+<p class=MsoNormal>                    classExam1: 9,</p>
+
+<p class=MsoNormal>                    groupWork: 14,</p>
+
+<p class=MsoNormal>                    midExam: 20,</p>
+
+<p class=MsoNormal>                    classExam2: 9,</p>
+
+<p class=MsoNormal>                    total: 52</p>
+
+<p class=MsoNormal>                }</p>
+
+<p class=MsoNormal>            },</p>
+
+<p class=MsoNormal>            &quot;28&quot;: {</p>
+
+<p class=MsoNormal>                name: &quot;ሂታንያ ይርጋለም&quot;,</p>
+
+<p class=MsoNormal>                christianName: &quot;እኅተ ጊዮርጊስ&quot;,</p>
+
+<p class=MsoNormal>                phone: &quot;933445566&quot;,</p>
+
+<p class=MsoNormal>                securityCode: &quot;345678&quot;,</p>
+
+<p class=MsoNormal>                scores: {</p>
+
+<p class=MsoNormal>                    classExam1: 10,</p>
+
+<p class=MsoNormal>                    groupWork: 14,</p>
+
+<p class=MsoNormal>                    midExam: 20,</p>
+
+<p class=MsoNormal>                    classExam2: 10,</p>
+
+<p class=MsoNormal>                    total: 54</p>
+
+<p class=MsoNormal>                }</p>
+
+<p class=MsoNormal>            },</p>
+
+<p class=MsoNormal>            &quot;4&quot;: {</p>
+
+<p class=MsoNormal>                name: &quot;ሚኪያስ ደምሴ&quot;,</p>
+
+<p class=MsoNormal>                christianName: &quot;ገብረ ማርያም&quot;,</p>
+
+<p class=MsoNormal>                phone: &quot;944556677&quot;,</p>
+
+<p class=MsoNormal>                securityCode: &quot;456789&quot;,</p>
+
+<p class=MsoNormal>                scores: {</p>
+
+<p class=MsoNormal>                    classExam1: 9,</p>
+
+<p class=MsoNormal>                    groupWork: 14,</p>
+
+<p class=MsoNormal>                    midExam: 18.5,</p>
+
+<p class=MsoNormal>                    classExam2: 9,</p>
+
+<p class=MsoNormal>                    total: 50.5</p>
+
+<p class=MsoNormal>                }</p>
+
+<p class=MsoNormal>            },</p>
+
+<p class=MsoNormal>            &quot;1&quot;: {</p>
+
+<p class=MsoNormal>                name: &quot;አርሴማ ጌጡ&quot;,</p>
+
+<p class=MsoNormal>                christianName: &quot;ወለተ መስቀል&quot;,</p>
+
+<p class=MsoNormal>                phone: &quot;955667788&quot;,</p>
+
+<p class=MsoNormal>                securityCode: &quot;567890&quot;,</p>
+
+<p class=MsoNormal>                scores: {</p>
+
+<p class=MsoNormal>                    classExam1: 10,</p>
+
+<p class=MsoNormal>                    groupWork: 6.5,</p>
+
+<p class=MsoNormal>                    midExam: 16,</p>
+
+<p class=MsoNormal>                    classExam2: 9,</p>
+
+<p class=MsoNormal>                    total: 41.5</p>
+
+<p class=MsoNormal>                }</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>        };</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // Method selection</p>
+
+<p class=MsoNormal>       
+document.querySelectorAll('input[name=&quot;accessMethod&quot;]').forEach(radio
+=&gt; {</p>
+
+<p class=MsoNormal>            radio.addEventListener('change', function() {</p>
+
+<p class=MsoNormal>               
+document.querySelectorAll('.access-form').forEach(form =&gt; {</p>
+
+<p class=MsoNormal>                    form.style.display = 'none';</p>
+
+<p class=MsoNormal>                });</p>
+
+<p class=MsoNormal>                </p>
+
+<p class=MsoNormal>                if (this.id === 'phoneMethod') {</p>
+
+<p class=MsoNormal>                   
+document.getElementById('phoneForm').style.display = 'block';</p>
+
+<p class=MsoNormal>                } else if (this.id === 'idMethod') {</p>
+
+<p class=MsoNormal>                   
+document.getElementById('idForm').style.display = 'block';</p>
+
+<p class=MsoNormal>                } else if (this.id === 'nameMethod') {</p>
+
+<p class=MsoNormal>                   
+document.getElementById('nameForm').style.display = 'block';</p>
+
+<p class=MsoNormal>                }</p>
+
+<p class=MsoNormal>            });</p>
+
+<p class=MsoNormal>        });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // View result button</p>
+
+<p class=MsoNormal>       
+document.getElementById('viewResultBtn').addEventListener('click', function() {</p>
+
+<p class=MsoNormal>            const phoneMethod =
+document.getElementById('phoneMethod').checked;</p>
+
+<p class=MsoNormal>            const idMethod =
+document.getElementById('idMethod').checked;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            let studentId = null;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            if (phoneMethod) {</p>
+
+<p class=MsoNormal>                const phone =
+document.getElementById('phoneNumber').value;</p>
+
+<p class=MsoNormal>                const code =
+document.getElementById('securityCode').value;</p>
+
+<p class=MsoNormal>                </p>
+
+<p class=MsoNormal>                // Find student by phone and security code</p>
+
+<p class=MsoNormal>                for (const [id, student] of
+Object.entries(studentDatabase)) {</p>
+
+<p class=MsoNormal>                    if (student.phone === phone &amp;&amp; student.securityCode
+=== code) {</p>
+
+<p class=MsoNormal>                        studentId = id;</p>
+
+<p class=MsoNormal>                        break;</p>
+
+<p class=MsoNormal>                    }</p>
+
+<p class=MsoNormal>                }</p>
+
+<p class=MsoNormal>                </p>
+
+<p class=MsoNormal>                if (!studentId) {</p>
+
+<p class=MsoNormal>                    showNotification('የስልክ ቁጥር ወይም የደህንነት ኮድ
+ትክክል አይደለም', 'error');</p>
+
+<p class=MsoNormal>                    return;</p>
+
+<p class=MsoNormal>                }</p>
+
+<p class=MsoNormal>            } </p>
+
+<p class=MsoNormal>            else if (idMethod) {</p>
+
+<p class=MsoNormal>                const id =
+document.getElementById('studentId').value;</p>
+
+<p class=MsoNormal>                const initials =
+document.getElementById('nameInitials').value;</p>
+
+<p class=MsoNormal>                </p>
+
+<p class=MsoNormal>                if (!studentDatabase[id]) {</p>
+
+<p class=MsoNormal>                    showNotification('የተማሪ መለያ ቁጥር ትክክል አይደለም',
+'error');</p>
+
+<p class=MsoNormal>                    return;</p>
+
+<p class=MsoNormal>                }</p>
+
+<p class=MsoNormal>                </p>
+
+<p class=MsoNormal>                const studentName =
+studentDatabase[id].name;</p>
+
+<p class=MsoNormal>                if (!studentName.startsWith(initials)) {</p>
+
+<p class=MsoNormal>                    showNotification('የስም ፊደላት ትክክል አይደለም',
+'error');</p>
+
+<p class=MsoNormal>                    return;</p>
+
+<p class=MsoNormal>                }</p>
+
+<p class=MsoNormal>                </p>
+
+<p class=MsoNormal>                studentId = id;</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>            else {</p>
+
+<p class=MsoNormal>                const fullName =
+document.getElementById('fullName').value;</p>
+
+<p class=MsoNormal>                const christianName =
+document.getElementById('christianName').value;</p>
+
+<p class=MsoNormal>                </p>
+
+<p class=MsoNormal>                // Find student by name</p>
+
+<p class=MsoNormal>                for (const [id, student] of
+Object.entries(studentDatabase)) {</p>
+
+<p class=MsoNormal>                    if (student.name === fullName &amp;&amp;
+student.christianName === christianName) {</p>
+
+<p class=MsoNormal>                        studentId = id;</p>
+
+<p class=MsoNormal>                        break;</p>
+
+<p class=MsoNormal>                    }</p>
+
+<p class=MsoNormal>                }</p>
+
+<p class=MsoNormal>                </p>
+
+<p class=MsoNormal>                if (!studentId) {</p>
+
+<p class=MsoNormal>                    showNotification('ስም ወይም የክርስትና ስም ትክክል አይደለም',
+'error');</p>
+
+<p class=MsoNormal>                    return;</p>
+
+<p class=MsoNormal>                }</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            if (studentId) {</p>
+
+<p class=MsoNormal>                displayStudentResult(studentId);</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>        });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // Display student result</p>
+
+<p class=MsoNormal>        function displayStudentResult(studentId) {</p>
+
+<p class=MsoNormal>            const student = studentDatabase[studentId];</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            if (!student) {</p>
+
+<p class=MsoNormal>                showNotification('ተማሪ አልተገኙም', 'error');</p>
+
+<p class=MsoNormal>                return;</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            // Update student info</p>
+
+<p class=MsoNormal>           
+document.getElementById('studentFullName').textContent = student.name;</p>
+
+<p class=MsoNormal>            document.getElementById('studentChristianName').textContent
+= student.christianName;</p>
+
+<p class=MsoNormal>           
+document.getElementById('studentIdDisplay').textContent = studentId;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            // Update scores</p>
+
+<p class=MsoNormal>           
+document.getElementById('classExam1').textContent = student.scores.classExam1;</p>
+
+<p class=MsoNormal>            document.getElementById('groupWork').textContent
+= student.scores.groupWork;</p>
+
+<p class=MsoNormal>            document.getElementById('midExam').textContent =
+student.scores.midExam;</p>
+
+<p class=MsoNormal>            document.getElementById('classExam2').textContent
+= student.scores.classExam2;</p>
+
+<p class=MsoNormal>           
+document.getElementById('totalScore').textContent = student.scores.total;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            // Update progress bars</p>
+
+<p class=MsoNormal>           
+document.getElementById('classExam1Bar').style.width =
+`${(student.scores.classExam1 / 10) * 100}%`;</p>
+
+<p class=MsoNormal>           
+document.getElementById('groupWorkBar').style.width =
+`${(student.scores.groupWork / 15) * 100}%`;</p>
+
+<p class=MsoNormal>           
+document.getElementById('midExamBar').style.width = `${(student.scores.midExam
+/ 25) * 100}%`;</p>
+
+<p class=MsoNormal>           
+document.getElementById('classExam2Bar').style.width =
+`${(student.scores.classExam2 / 10) * 100}%`;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            // Update total score badge</p>
+
+<p class=MsoNormal>            const totalScoreBadge =
+document.getElementById('totalScoreBadge');</p>
+
+<p class=MsoNormal>            totalScoreBadge.textContent =
+student.scores.total;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            // Set score color class</p>
+
+<p class=MsoNormal>            totalScoreBadge.className = 'score-badge
+d-inline-block';</p>
+
+<p class=MsoNormal>            if (student.scores.total &gt;= 50) {</p>
+
+<p class=MsoNormal>               
+totalScoreBadge.classList.add('score-excellent');</p>
+
+<p class=MsoNormal>               
+document.getElementById('gradeDisplay').textContent = 'ጥሩ ውጤት! &#127881;';</p>
+
+<p class=MsoNormal>            } else if (student.scores.total &gt;= 40) {</p>
+
+<p class=MsoNormal>                totalScoreBadge.classList.add('score-good');</p>
+
+<p class=MsoNormal>               
+document.getElementById('gradeDisplay').textContent = 'መልካም ውጤት &#128077;';</p>
+
+<p class=MsoNormal>            } else if (student.scores.total &gt;= 30) {</p>
+
+<p class=MsoNormal>                totalScoreBadge.classList.add('score-average');</p>
+
+<p class=MsoNormal>               
+document.getElementById('gradeDisplay').textContent = 'አማካኝ ውጤት';</p>
+
+<p class=MsoNormal>            } else if (student.scores.total &gt;= 20) {</p>
+
+<p class=MsoNormal>                totalScoreBadge.classList.add('score-low');</p>
+
+<p class=MsoNormal>                document.getElementById('gradeDisplay').textContent
+= 'ማሻሻል ያስፈልጋል';</p>
+
+<p class=MsoNormal>            } else {</p>
+
+<p class=MsoNormal>                totalScoreBadge.classList.add('score-poor');</p>
+
+<p class=MsoNormal>               
+document.getElementById('gradeDisplay').textContent = 'ተጨማሪ ጥረት ያስፈልጋል &#128170;';</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            // Performance comment</p>
+
+<p class=MsoNormal>            const comment =
+getPerformanceComment(student.scores.total);</p>
+
+<p class=MsoNormal>           
+document.getElementById('performanceComment').textContent = comment;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            // Generate simple QR code (text representation)</p>
+
+<p class=MsoNormal>            generateQRCode(studentId);</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            // Switch to result view</p>
+
+<p class=MsoNormal>           
+document.getElementById('loginPortal').style.display = 'none';</p>
+
+<p class=MsoNormal>           
+document.getElementById('resultDisplay').style.display = 'block';</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            showNotification('ውጤትዎ በሚገባ ተገኝቷል!');</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // Generate QR code (simple implementation)</p>
+
+<p class=MsoNormal>        function generateQRCode(studentId) {</p>
+
+<p class=MsoNormal>            const qrDiv = document.getElementById('qrCode');</p>
+
+<p class=MsoNormal>            const qrUrl =
+`${window.location.origin}?student=${studentId}`;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            // Using a simple text QR code for demo</p>
+
+<p class=MsoNormal>            // In production, use a QR code library like
+qrcode.js</p>
+
+<p class=MsoNormal>            qrDiv.innerHTML = `</p>
+
+<p class=MsoNormal>                &lt;div style=&quot;text-align: center;
+padding: 10px;&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;div style=&quot;font-size: 12px;
+margin-bottom: 5px;&quot;&gt;Student ID: ${studentId}&lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div style=&quot;font-family:
+monospace; font-size: 8px; letter-spacing: 2px;&quot;&gt;</p>
+
+<p class=MsoNormal>                        ██████████████&lt;br&gt;</p>
+
+<p class=MsoNormal>                        ██          ██&lt;br&gt;</p>
+
+<p class=MsoNormal>                        ██  ████  ██&lt;br&gt;</p>
+
+<p class=MsoNormal>                        ██  ████  ██&lt;br&gt;</p>
+
+<p class=MsoNormal>                        ██          ██&lt;br&gt;</p>
+
+<p class=MsoNormal>                        ██████████████&lt;br&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div style=&quot;font-size: 10px;
+margin-top: 5px;&quot;&gt;Scan for result&lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            `;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // Get performance comment</p>
+
+<p class=MsoNormal>        function getPerformanceComment(score) {</p>
+
+<p class=MsoNormal>            if (score &gt;= 50) {</p>
+
+<p class=MsoNormal>                return &quot;በጣም እጅግ ጥሩ ውጤት! በፈተናው ላይ ከፍተኛ አፈፃፀም
+አሳይተዋል። ይህንን ውጤት ለመጠበቅ በሚቀጥለው ዘመቻ በተመሳሳይ መልኩ ይሞክሩ።&quot;;</p>
+
+<p class=MsoNormal>            } else if (score &gt;= 40) {</p>
+
+<p class=MsoNormal>                return &quot;መልካም ውጤት! በፈተናው ላይ ጥሩ አፈፃፀም አሳይተዋል።
+በሚቀጥለው ክፍል ከፍተኛ ውጤት ለማምጣት ትንሽ ተጨማሪ ጥረት ያስፈልግዎታል።&quot;;</p>
+
+<p class=MsoNormal>            } else if (score &gt;= 30) {</p>
+
+<p class=MsoNormal>                return &quot;አማካኝ ውጤት። የተማሩትን ትምህርት ለመጠበቅ ተጨማሪ
+ጥረት ያስፈልግዎታል። በቤት ትምህርት እና በክፍል ትኩረት ላይ ትኩረት ያድርጉ።&quot;;</p>
+
+<p class=MsoNormal>            } else {</p>
+
+<p class=MsoNormal>                return &quot;ውጤትዎ መሻሻል ያስፈልገዋል። ከመምህርዎ እና ከቡድን
+ጓደኞችዎ ጋር በመሆን ተጨማሪ ጥረት ያድርጉ። በሚቀጥለው ፈተና የተሻለ ውጤት ለማምጣት ይሞክሩ።&quot;;</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // Share result</p>
+
+<p class=MsoNormal>        function shareResult(platform) {</p>
+
+<p class=MsoNormal>            const studentName = document.getElementById('studentFullName').textContent;</p>
+
+<p class=MsoNormal>            const totalScore =
+document.getElementById('totalScore').textContent;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            let shareUrl = '';</p>
+
+<p class=MsoNormal>            let message = `የ${studentName} የመሠረተ ሃይማኖት ፈተና ውጤት:
+${totalScore}/60`;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            if (platform === 'whatsapp') {</p>
+
+<p class=MsoNormal>                shareUrl =
+`https://wa.me/?text=${encodeURIComponent(message)}`;</p>
+
+<p class=MsoNormal>            } else if (platform === 'telegram') {</p>
+
+<p class=MsoNormal>                shareUrl =
+`https://t.me/share/url?url=${encodeURIComponent(window.location.href)}&amp;text=${encodeURIComponent(message)}`;</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            if (shareUrl) {</p>
+
+<p class=MsoNormal>                window.open(shareUrl, '_blank');</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // Print result</p>
+
+<p class=MsoNormal>        function printResult() {</p>
+
+<p class=MsoNormal>            window.print();</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // Go back to login</p>
+
+<p class=MsoNormal>        function goBackToLogin() {</p>
+
+<p class=MsoNormal>           
+document.getElementById('resultDisplay').style.display = 'none';</p>
+
+<p class=MsoNormal>           
+document.getElementById('loginPortal').style.display = 'block';</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            // Clear form fields</p>
+
+<p class=MsoNormal>            document.getElementById('phoneNumber').value =
+'';</p>
+
+<p class=MsoNormal>            document.getElementById('securityCode').value =
+'';</p>
+
+<p class=MsoNormal>            document.getElementById('studentId').value = '';</p>
+
+<p class=MsoNormal>            document.getElementById('nameInitials').value =
+'';</p>
+
+<p class=MsoNormal>            document.getElementById('fullName').value = '';</p>
+
+<p class=MsoNormal>            document.getElementById('christianName').value =
+'';</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // View all results (link to full table)</p>
+
+<p class=MsoNormal>        function viewAllResults() {</p>
+
+<p class=MsoNormal>            window.open('full_results.html', '_blank'); //
+Link to your full results page</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // Show notification</p>
+
+<p class=MsoNormal>        function showNotification(message, type = 'success')
+{</p>
+
+<p class=MsoNormal>            const notification =
+document.getElementById('notification');</p>
+
+<p class=MsoNormal>            notification.textContent = message;</p>
+
+<p class=MsoNormal>            notification.className = `notification alert
+alert-${type === 'error' ? 'danger' : 'success'}`;</p>
+
+<p class=MsoNormal>            notification.style.display = 'block';</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            setTimeout(() =&gt; {</p>
+
+<p class=MsoNormal>                notification.style.display = 'none';</p>
+
+<p class=MsoNormal>            }, 3000);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // Forgot access link</p>
+
+<p class=MsoNormal>       
+document.getElementById('forgotAccess').addEventListener('click', function(e) {</p>
+
+<p class=MsoNormal>            e.preventDefault();</p>
+
+<p class=MsoNormal>            showNotification('እባክዎ ከመምህርዎ ወይም ከቤተ ክርስቲያን አስተዳደር
+ያነጋግሩ። ስልክ: 0911-XX-XX-XX', 'error');</p>
+
+<p class=MsoNormal>        });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // Auto-detect URL parameters for direct access</p>
+
+<p class=MsoNormal>        window.addEventListener('DOMContentLoaded',
+function() {</p>
+
+<p class=MsoNormal>            const urlParams = new
+URLSearchParams(window.location.search);</p>
+
+<p class=MsoNormal>            const studentParam = urlParams.get('student');</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            if (studentParam &amp;&amp;
+studentDatabase[studentParam]) {</p>
+
+<p class=MsoNormal>                displayStudentResult(studentParam);</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>        });</p>
+
+<p class=MsoNormal>    &lt;/script&gt;</p>
+
+<p class=MsoNormal>&lt;/body&gt;</p>
+
+<p class=MsoNormal>&lt;/html&gt;</p>
+
+</div>
+
+</body>
+
+</html>
